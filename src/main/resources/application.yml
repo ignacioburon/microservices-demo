@@ -1,0 +1,65 @@
+#Seems this is not needed with the spring-boot-web-starter.
+#camel:
+#  springboot:
+#    main-run-controller: true
+
+# the name of Camel
+camel.springboot.name: MyCamel
+
+# use servlet as the component
+# (this can be omitted as camel will lookup on the classpath and discover it automatic)
+camel.rest.component: servlet
+
+# host and port for the rest service
+camel.rest.port: 8081
+# resolve the hostname to be localhost
+#camel.rest.host-name-resolver: localhostname
+camel.rest.context-path: /camel
+
+# turn on cors on the rest service
+camel.rest.enable-cors: true
+# we can configure additional headers if we like
+#camel.rest.cors-headers.foo=bar
+
+# turn on json binding
+camel.rest.binding-mode: json
+
+# output in pretty print mode
+camel.rest.data-format-property.prettyPrint: true
+
+# context path for swagger api docs
+#camel.rest.api-context-path: /api-doc
+
+# swagger api properties
+#camel.rest.api-property.api.title: Geocoder API
+#camel.rest.api-property.api.version: 1.0.0
+#camel.rest.api-property.cors: true
+
+
+# what to say
+greeting: Hello World
+
+# how often to trigger the timer
+timer.period: 2000
+
+# to automatic shutdown the JVM after a period of time
+#camel.springboot.duration-max-seconds: 60
+#camel.springboot.duration-max-messages: 100
+
+# add for example: &repeatCount=5 to the timer endpoint to make Camel idle
+#camel.springboot.duration-max-idle-seconds: 15
+
+# all access to actuator endpoints without security
+management.security.enabled: false
+# turn on actuator health check
+endpoints.health.enabled: true
+
+# allow to obtain basic information about camel routes (read only mode)
+endpoints.camelroutes.enabled: true
+endpoints.camelroutes.read-only: true
+
+# to configure logging levels
+#logging.level.org.springframework: INFO
+#logging.level.org.apache.camel.spring.boot: INFO
+#logging.level.org.apache.camel.impl: DEBUG
+#logging.level.sample.camel: DEBUG

@@ -15,7 +15,7 @@
  */
 package io.openshift.booster;
 
-import io.openshift.booster.service.GreetingProperties;
+import ibg.com.microservices.demo.api.GreetingProperties;
 import org.junit.Test;
 
 import static com.jayway.restassured.RestAssured.given;

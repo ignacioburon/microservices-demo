@@ -15,14 +15,16 @@
  */
 package io.openshift.booster;
 
-import com.jayway.restassured.RestAssured;
-import io.openshift.booster.service.GreetingProperties;
+import ibg.com.microservices.demo.api.GreetingProperties;
+
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.jayway.restassured.RestAssured;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)

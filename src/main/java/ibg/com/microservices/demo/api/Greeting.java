@@ -13,23 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package ibg.com.microservices.demo.api;
 
-package io.openshift.booster.service;
+public class Greeting {
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+    private final String content;
 
-@Component
-@ConfigurationProperties("greeting")
-public class GreetingProperties {
-
-    private String message = "Hello, %s!";
-
-    public String getMessage() {
-        return message;
+    public Greeting() {
+        this.content = null;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public Greeting(String content) {
+        this.content = content;
+    }
+
+    public String getContent() {
+        return content;
     }
 }
